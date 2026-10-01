@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Spam Shield Pro</title>
+<style>
+  :root {
+    --bg: #f7f8fa;
+    --card: #ffffff;
+    --text: #1b1f27;
+    --muted: #5b6472;
+    --accent: #2563eb;
+    --accent-dark: #1d4ed8;
+    --border: #e4e7ec;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 32px 20px 80px; }
+  header.page-head {
+    background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  header.page-head h1 { margin: 0 0 6px; font-size: 26px; }
+  header.page-head p { margin: 0; opacity: .9; font-size: 14px; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 28px 28px 8px;
+    margin-top: -28px;
+    box-shadow: 0 1px 3px rgba(16,24,40,.06);
+  }
+  h2 { font-size: 19px; margin-top: 34px; color: var(--accent-dark); border-bottom: 2px solid var(--border); padding-bottom: 8px; }
+  h3 { font-size: 16px; margin-top: 22px; }
+  p, li { color: var(--text); font-size: 15px; }
+  ul { padding-left: 22px; }
+  table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 14px; }
+  th, td { text-align: left; padding: 10px 12px; border: 1px solid var(--border); vertical-align: top; }
+  th { background: #eef2ff; color: var(--accent-dark); font-weight: 600; }
+  tr:nth-child(even) td { background: #fafbfc; }
+  .notice {
+    background: #fff4e5;
+    border: 1px solid #f3c88a;
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin: 18px 0;
+    font-size: 14px;
+  }
+  .safety {
+    background: #fde8e8;
+    border: 1px solid #f0a8a8;
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin: 18px 0;
+    font-size: 14px;
+  }
+  a { color: var(--accent); word-break: break-word; }
+  footer { text-align: center; color: var(--muted); font-size: 13px; margin-top: 36px; padding-top: 18px; border-top: 1px solid var(--border); }
+  .meta { color: var(--muted); font-size: 13px; margin-bottom: 4px; }
+</style>
+</head>
+<body>
+<header class="page-head">
+  <h1>Privacy Policy</h1>
+  <p>Spam Shield Pro · Thanh Mich LTD</p>
+</header>
+<div class="wrap">
+  <div class="card">
+    <p class="meta"><strong>Effective date:</strong> October 1, 2026</p>
+    <p>Spam Shield Pro ("the App", "we", "us") is developed and operated by <strong>Thanh Mich LTD</strong>
+      ("Developer"). This Privacy Policy explains what information the App accesses, what we actually
+      collect and transmit off your device, and what stays on your device. We wrote it to match what the
+      App's code does — not a generic template.</p>
+    <p>If you have questions, contact us at <a href="mailto:thanhmichltd@gmail.com">thanhmichltd@gmail.com</a>.</p>
+
+    <h2>1. Summary</h2>
+    <ul>
+      <li>Spam Shield Pro does <strong>not</strong> require you to create an account or sign in.</li>
+      <li>Caller-ID, spam-risk scoring, and number lookup are performed <strong>entirely on your device</strong>,
+        against a database bundled with the App and a local cache. Your contacts, call history, and the
+        numbers you look up are <strong>not</strong> sent to our servers or to any third party for this
+        purpose.</li>
+      <li>The App uses third-party advertising, analytics, and crash-reporting SDKs (listed in Section 4),
+        which do collect device/advertising identifiers and usage data as described below.</li>
+      <li>The App has no in-app purchases; a billing library is bundled only to support an internal
+        "ad-free" flag and is not used for any purchase flow.</li>
+    </ul>
+
+    <h2>2. Information We Access and How We Use It</h2>
+    <p>The table below lists every runtime/sensitive permission the App requests, exactly as declared in
+      the App's manifest, and what each one is used for.</p>
+    <table>
+      <tr><th>Permission</th><th>What it's used for</th><th>Leaves your device?</th></tr>
+      <tr><td>READ_CONTACTS, WRITE_CONTACTS</td><td>Show the caller's saved name on incoming calls; let you save, block, or edit a contact from the App</td><td>No — on-device only</td></tr>
+      <tr><td>READ_CALL_LOG</td><td>Show your Call History (missed/incoming/outgoing) inside the App</td><td>No — on-device only</td></tr>
+      <tr><td>READ_PHONE_STATE, ANSWER_PHONE_CALLS, MANAGE_OWN_CALLS, CALL_PHONE</td><td>Detect call state; let the App answer/manage calls through its dialer and in-call screen</td><td>No — used locally</td></tr>
+      <tr><td>POST_NOTIFICATIONS</td><td>Show spam-alert and caller-ID notifications</td><td>No</td></tr>
+      <tr><td>FOREGROUND_SERVICE, FOREGROUND_SERVICE_PHONE_CALL, WAKE_LOCK</td><td>Keep the in-call screen and call-screening service running reliably during an active call</td><td>No</td></tr>
+      <tr><td>USE_FULL_SCREEN_INTENT</td><td>Show the full-screen incoming-call / caller-ID screen</td><td>No</td></tr>
+    </table>
+
+    <h3>Call Screening, Default Phone App, and In-Call Screen</h3>
+    <p>Spam Shield Pro can register as a <strong>call-screening app</strong> and can be set as your device's
+      <strong>default phone (dialer) app</strong>. When enabled, the App evaluates incoming numbers against
+      its local spam database and your settings to decide whether to allow, flag, or silently block a call —
+      entirely on your device. The App also shows its own in-call screen so you can see caller-ID and
+      spam-risk information while a call is active.</p>
+    <p>You can revoke the default-dialer role or disable call screening at any time in Android Settings →
+      Apps → Default apps, or from the App's own settings.</p>
+
+    <h3>Notification Access ("Unseen" feature) — Prominent Disclosure</h3>
+    <p>The App includes an optional feature ("Unseen") that uses Android's Notification Listener API to let
+      you review notification previews (e.g., message previews from your messaging apps) you have not yet
+      opened. <strong>This permission lets the App read the content of notifications posted by other apps on
+      your device.</strong></p>
+    <ul>
+      <li>Notification content read for this feature is processed and stored <strong>only on your
+        device</strong>, inside the App's own local "Unseen" list.</li>
+      <li>It is <strong>not</strong> uploaded to our servers, not sent to any third party, and not used for
+        advertising.</li>
+      <li>You grant this permission explicitly in Android Settings → Notification access, and can revoke it
+        at any time — doing so disables only the Unseen feature.</li>
+    </ul>
+
+    <h2>3. On-Device Processing — What Never Leaves Your Device</h2>
+    <p>The following categories of data are processed <strong>locally only</strong> and are never
+      transmitted by the App to our servers or to any third party:</p>
+    <ul>
+      <li>Your contacts (names, numbers) and any edits you make to them.</li>
+      <li>Your call log / call history.</li>
+      <li>Phone numbers you look up, and the spam/caller-ID result returned (matched against a bundled seed
+        database and a local cache — no network request is made for a lookup).</li>
+      <li>Notification previews read for the "Unseen" feature.</li>
+    </ul>
+
+    <h2>4. Third-Party Advertising, Analytics, and Attribution Partners</h2>
+    <p>The App is supported by advertising and uses analytics/crash-reporting tools provided by the
+      following companies. These providers may collect device and advertising identifiers (such as your
+      Android Advertising ID), general app-interaction/usage data, and diagnostic/crash data, under their
+      own privacy policies:</p>
+    <table>
+      <tr><th>Partner</th><th>Role</th><th>Privacy policy</th></tr>
+      <tr><td>Google (AdMob / Google Mobile Ads, Firebase Analytics, Firebase Crashlytics, Firebase Remote Config, Google User Messaging Platform consent)</td><td>Advertising, ad consent management, analytics, crash reporting, remote configuration</td><td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></td></tr>
+      <tr><td>Meta / Meta Audience Network</td><td>Advertising</td><td><a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener">facebook.com/privacy/policy</a></td></tr>
+      <tr><td>AppLovin</td><td>Advertising, mediation</td><td><a href="https://www.applovin.com/privacy/" target="_blank" rel="noopener">applovin.com/privacy</a></td></tr>
+      <tr><td>Adjust</td><td>Ad-attribution and analytics measurement</td><td><a href="https://www.adjust.com/terms/privacy-policy/" target="_blank" rel="noopener">adjust.com/terms/privacy-policy</a></td></tr>
+    </table>
+    <p>Our advertising stack also integrates with Google's ad-mediation network, which may route ad
+      requests to additional certified mediation partners — <strong>Unity Ads, Pangle (ByteDance), Vungle
+      (Liftoff), and Mintegral</strong> — without requiring an App update. We also bundle the
+      <strong>AppsFlyer</strong> attribution SDK and a <strong>TikTok</strong> app identifier for potential
+      future attribution use; in the current version these are not configured with an active measurement
+      key and are not actively sending data. We list them here for transparency and will keep this section
+      accurate as our ad/attribution configuration changes.</p>
+    <p><strong>Advertising identifiers.</strong> Because of the SDKs above, the App requests the Android
+      Advertising ID permission and related Privacy Sandbox permissions. You can reset or opt out of
+      interest-based advertising for your device identifier in Android Settings → Privacy → Ads, or via the
+      consent/ad-settings screen the App may show you (EEA/UK users are shown a consent form via Google's
+      User Messaging Platform).</p>
+
+    <h2>5. How We Use Information</h2>
+    <p>Information collected by the third-party SDKs above is used to show and measure advertising,
+      understand how the App is used in aggregate so we can fix bugs and improve features, and diagnose
+      crashes. We do not use your contacts, call log, notification content, or locally-matched caller-ID
+      data for advertising.</p>
+
+    <h2>6. Data Sharing and Sale</h2>
+    <p>We do not sell your personal information. The only parties we share data with are the service
+      providers listed in Section 4, each acting for the purposes described above. We do not share your
+      contacts, call log, or notification content with anyone.</p>
+
+    <h2>7. Important Safety Notice</h2>
+    <div class="safety">Spam-call detection and call-screening are provided on a best-effort basis using a
+      local database and may not identify every spam or fraudulent call, and may occasionally flag a
+      legitimate call. <strong>Do not rely on this App for emergency communications.</strong> Always ensure
+      you can reach emergency services using your device's standard calling method, regardless of this
+      App's default-dialer or call-screening settings.</div>
+
+    <h2>8. Children's Privacy</h2>
+    <p>Spam Shield Pro is not directed at children under 13 (or the minimum age of digital consent in your
+      jurisdiction), and we do not knowingly collect personal information from children. If you believe a
+      child has provided us information, contact us and we will take appropriate action.</p>
+
+    <h2>9. Data Retention and Your Choices</h2>
+    <ul>
+      <li>There is no account to delete, because the App does not require one.</li>
+      <li>On-device data (cached contacts/call-log display data, the local "Unseen" list) is removed when
+        you uninstall the App or clear its storage.</li>
+      <li>Data held by the third-party SDKs in Section 4 is retained and deleted according to each
+        provider's own policy. You may reset your Android Advertising ID or limit ad tracking in your
+        device settings at any time.</li>
+      <li>To ask about or request deletion of any data associated with your device identifiers, email
+        <a href="mailto:thanhmichltd@gmail.com">thanhmichltd@gmail.com</a>.</li>
+      <li>Depending on your location, you may have rights to access, correct, delete, or restrict
+        processing of your personal information (e.g., under GDPR or CCPA/CPRA). Contact us to exercise
+        these rights; we will respond within a reasonable time.</li>
+    </ul>
+
+    <h2>10. Security</h2>
+    <p>We rely on industry-standard protections, including TLS encryption for data in transit used by the
+      third-party SDKs listed above. No method of transmission or storage is 100% secure, and we cannot
+      guarantee absolute security.</p>
+
+    <h2>11. International Data Transfers</h2>
+    <p>Some of the third-party providers listed in Section 4 may process data in countries other than your
+      own. Each provider maintains its own safeguards for international transfers, as described in their
+      respective privacy policies linked above.</p>
+
+    <h2>12. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy as the App's features or third-party SDKs change. We will update
+      the "Effective date" above when we do. Continued use of the App after a change constitutes acceptance
+      of the updated policy.</p>
+
+    <h2>13. Contact Us</h2>
+    <p><strong>Thanh Mich LTD</strong><br>Email: <a href="mailto:thanhmichltd@gmail.com">thanhmichltd@gmail.com</a></p>
+
+    <footer>Spam Shield Pro — Privacy Policy · © 2026 Thanh Mich LTD</footer>
+  </div>
+</div>
+</body>
+</html>
